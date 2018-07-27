@@ -38,3 +38,38 @@ A user will be able to log into their account to create a 'listing' to barter wi
  an a'd user will be able to log hours from coaching other coaches
  
  an a'd user will be able export their coaching logs to CSV
+ 
+## Data Schema and Relationships
+ 
+#### User:
+* {Profile}
+* email!
+* name!
+* password!
+* age!
+* [{Post}]
+* [{LoggedCall}]
+* {CoachingTransaction}
+
+#### Profile
+* {User}
+* description/about
+* [availableTimes]
+* [{Message}]
+
+#### Post
+* {User}
+* category
+* [tags]
+* duration
+
+#### LoggedCall
+* {User}
+* date
+* {coachee as User} (who was coached)
+* hoursCoached
+
+#### Messages
+* {recipient as User}
+* {sender as User}
+* content
