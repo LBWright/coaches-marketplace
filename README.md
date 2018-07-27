@@ -52,24 +52,31 @@ A user will be able to log into their account to create a 'listing' to barter wi
 * {CoachingTransaction}
 
 #### Profile
-* {User}
+* {User}!
 * description/about
 * [availableTimes]
 * [{Message}]
 
 #### Post
-* {User}
-* category
+* {User}!
+* category!
 * [tags]
 * duration
+* description!
 
 #### LoggedCall
-* {User}
-* date
-* {coachee as User} (who was coached)
-* hoursCoached
+* {User}!
+* date!
+* {coachee as User}! (who was coached)
+* hoursCoached!
 
-#### Messages
-* {recipient as User}
-* {sender as User}
-* content
+#### Message
+* {recipient as User}!
+* {sender as User}!
+* content!
+
+#### CoachingTransaction
+* {initiator as User}!
+* {receiver as User}!
+* length of agreement!
+* notes
