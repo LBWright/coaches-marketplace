@@ -69,6 +69,7 @@ A user will be able to log into their account to create a 'listing' to barter wi
 * date!
 * {coachee as User}! (who was coached)
 * hoursCoached!
+* notes
 
 #### Message
 * {recipient as User}!
